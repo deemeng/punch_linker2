@@ -12,7 +12,7 @@ RUN --mount=type=cache,target=/root/.cache/pip \
     python -m pip install -r requirements.txt
 
 # Copy the source code into the container.
-WORKDIR /punch_linker
-COPY . /punch_linker/.
+WORKDIR /punch_linker2
+COPY . /punch_linker2/.
 
-CMD python /punch_linker/main.py
+CMD python /punch_linker2/main.py

@@ -1,4 +1,4 @@
-<h1 align="center">PUNCH_Linker</h1>
+<h1 align="center">PUNCH_Linker2</h1>
 <p align="center"><i>A Disordered Flexible Linker (DFL) ppredictor trained on DLD domain Linker dataset and <a href="https://disprot.org/">Disprot</a> Database.</i></p>
 
 ## 📝 Description
@@ -7,13 +7,11 @@ Currently we have <a href="https://disprot.org/">PUNCH2</a> for IDR structure pr
 PUNCH_Linker is trained on more than 2000 DFL linker dataset from <a href="https://disprot.org/">DLD</a> dataset and <a href="https://disprot.org/">Disprot</a>, its performance is better than TOP predictors on the CAID2 Linker dataset.
 
 ## 🐣 Getting Started
-Currently, we provide two ways to use this perdictor: Docker or Download source code from this Github.
 ### Pre-requirements
 This predictor requires sequences embedded with [ProtTrans](https://github.com/agemagician/ProtTrans) and [MSA Transformer](https://github.com/facebookresearch/esm).
 Note, 
 * File format should be `[SEQUENCE_NAME/ID].npy`, replace *SEQUENCE_NAME/ID* with the actural sequence ID, it should be the same as the name from `.fasta` file.
 * Matrix shape: \
-  **Onehot**: `(1, SEQUENCE_LENGTH, 21)` \
   **ProtTrans**: `(1, SEQUENCE_LENGTH, 1024)` \
   **MSA Transformer**: `(1, SEQUENCE_LENGTH, 768)`
 
@@ -27,7 +25,7 @@ Note,
 #### Installing
 * Pull the Docker image from  <a href="https://hub.docker.com/repository/docker/dimeng851/punch_linker/tags">DockerHub</a>
   ```sh
-  docker pull dimeng851/punch_linker:v2
+  docker pull dimeng851/punch_linker2:v1
   ```
 
 #### Executing program
@@ -42,23 +40,23 @@ Note,
   docker run -d \
   -it \
   --name [CONTAINER_NAME] \
-  --mount type=bind,source=[PATH_TO_INPUT_FASTA],target=/punch_linker/data/input.fasta \
-  --mount type=bind,source=[PATH_TO_MSATRANS],target=/punch_linker/data/msaTrans \
-  --mount type=bind,source=[PATH_TO_PROTTRANS],target=/punch_linker/data/protTrans \
-  --mount type=bind,source=[PATH_OUTPUT],target=/punch_linker/output \
-  dimeng851/punch_linker:v1
+  --mount type=bind,source=[PATH_TO_INPUT_FASTA],target=/punch_linker2/data/input.fasta \
+  --mount type=bind,source=[PATH_TO_MSATRANS],target=/punch_linker2/data/msaTrans \
+  --mount type=bind,source=[PATH_TO_PROTTRANS],target=/punch_linker2/data/protTrans \
+  --mount type=bind,source=[PATH_OUTPUT],target=/punch_linker2/output \
+  dimeng851/punch_linker2:v1
   ```
   > 
   >An example:
   ```sh
   docker run -d \
   -it \
-  --name punch_linker_con \
-  --mount type=bind,source=/Users/deemeng/Downloads/data/linker/linker.fasta,target=/punch_linker/data/input.fasta \
-  --mount type=bind,source=/Users/deemeng/Downloads/data/linker/msaTrans,target=/punch_linker/data/msaTrans \
-  --mount type=bind,source=/Users/deemeng/Downloads/data/linker/protTrans,target=/punch_linker/data/protTrans \
-  --mount type=bind,source=/Users/deemeng/Downloads/data/linker/output,target=/punch_linker/output \
-  dimeng851/punch_linker:v1
+  --name punch_linker2_con \
+  --mount type=bind,source=/home/dimeng/caid3/test.fasta,target=/punch_linker2/data/input.fasta \
+  --mount type=bind,source=/home/dimeng/project/domain_linker/data/caid/features/msaTrans,target=/punch_linker2/data/msaTrans \
+  --mount type=bind,source=/home/dimeng/project/domain_linker/data/caid/features/protTrans,target=/punch_linker2/data/protTrans \
+  --mount type=bind,source=/home/dimeng/caid3/punch_linker_output,target=/punch_linker2/output \
+  dimeng851/punch_linker2:v1
   ```
 * Find the results in **OUTPUT** folder.
 
@@ -74,4 +72,4 @@ di.meng@ucdconnect.ie
 📬 Gianluca Pollastri - gianluca.pollastri@ucd.ie 
 
 ## Project
->https://github.com/deemeng/punch_linker
+>https://github.com/deemeng/punch_linker2

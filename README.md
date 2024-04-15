@@ -3,7 +3,7 @@
 
 ## 📝 Description
 LINKER-Pred2 project belongs to a serious of PUNCH projects which focus on the Structure and Function prediction of Intrisically Diordered Protein/Region (IDP/IDR).
-Currently we have <a href="https://disprot.org/">PUNCH2</a> for IDR structure prediction and <a href="https://disprot.org/">LINKER-Pred</a> for DFL prediction.
+Currently we have <a href="https://github.com/deemeng/punch2">PUNCH2</a> for IDR structure prediction and <a href="https://github.com/deemeng/punch_linker2">LINKER-Pred</a> for DFL prediction.
 PUNCH_Linker is trained on more than 2000 DFL linker dataset from <a href="https://disprot.org/">DLD</a> dataset and <a href="https://disprot.org/">Disprot</a>, its performance is better than TOP predictors on the CAID2 Linker dataset.
 
 ## 🐣 Getting Started

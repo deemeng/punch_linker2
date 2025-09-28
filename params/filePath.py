@@ -27,6 +27,6 @@ path_predictor = 'predictor'
 
 # 3.Output
 create_folder(path_output)
-path_prediction = os.path.join(path_output, 'disorder')
+path_prediction = os.path.join(path_output, 'linker')
 path_time = os.path.join(path_output, 'timings.csv')
 create_folder(path_prediction)

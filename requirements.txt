@@ -1,7 +1,7 @@
 biopython==1.81
 importlib-metadata==6.8.0
 importlib-resources==6.1.1
-numpy==1.26.0
+numpy==1.26.4
 pandas==2.1.3
 scikit-learn==1.3.2
 tqdm==4.66.1

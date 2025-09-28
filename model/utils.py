@@ -30,7 +30,7 @@ def load_checkpoint(net, optimizer, PATH):
     start_epoch = 0
     if os.path.isfile(PATH):
         print("=> loading checkpoint '{}'".format(PATH))
-        checkpoint = torch.load(PATH, map_location=device)
+        checkpoint = torch.load(PATH, map_location=device, weights_only=False)
         start_epoch = checkpoint['epoch']
         net.load_state_dict(checkpoint['model_state_dict'])
         optimizer.load_state_dict(checkpoint['optimizer_state_dict'])

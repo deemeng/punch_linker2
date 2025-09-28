@@ -25,9 +25,9 @@ Note,
 * Go to **[embedding](https://github.com/deemeng/embedding)** if you don't have [ProtTrans](https://github.com/agemagician/ProtTrans) and [MSA Transformer](https://github.com/facebookresearch/esm) embedded sequences;
 * Docker Desktop 4.27.2 or higher;
 #### Installing
-* Pull the Docker image from  <a href="https://hub.docker.com/repository/docker/dimeng851/punch_linker/tags">DockerHub</a>
+* Pull the Docker image from  <a href="https://hub.docker.com/repository/docker/dimeng851/punch_linker2/tags">DockerHub</a>
   ```sh
-  docker pull dimeng851/punch_linker:v2
+  docker pull dimeng851/punch_linker2:v2
   ```
 
 #### Executing program
@@ -42,23 +42,23 @@ Note,
   docker run -d \
   -it \
   --name [CONTAINER_NAME] \
-  --mount type=bind,source=[PATH_TO_INPUT_FASTA],target=/punch_linker/data/input.fasta \
-  --mount type=bind,source=[PATH_TO_MSATRANS],target=/punch_linker/data/msaTrans \
-  --mount type=bind,source=[PATH_TO_PROTTRANS],target=/punch_linker/data/protTrans \
-  --mount type=bind,source=[PATH_OUTPUT],target=/punch_linker/output \
-  dimeng851/punch_linker:v1
+  --mount type=bind,source=[PATH_TO_INPUT_FASTA],target=/punch_linker2/data/input.fasta \
+  --mount type=bind,source=[PATH_TO_MSATRANS],target=/punch_linker2/data/msaTrans \
+  --mount type=bind,source=[PATH_TO_PROTTRANS],target=/punch_linker2/data/protTrans \
+  --mount type=bind,source=[PATH_OUTPUT],target=/punch_linker2/output \
+  dimeng851/punch_linker2:v2
   ```
   > 
   >An example:
   ```sh
   docker run -d \
   -it \
-  --name punch_linker_con \
-  --mount type=bind,source=/Users/deemeng/Downloads/data/linker/linker.fasta,target=/punch_linker/data/input.fasta \
-  --mount type=bind,source=/Users/deemeng/Downloads/data/linker/msaTrans,target=/punch_linker/data/msaTrans \
-  --mount type=bind,source=/Users/deemeng/Downloads/data/linker/protTrans,target=/punch_linker/data/protTrans \
-  --mount type=bind,source=/Users/deemeng/Downloads/data/linker/output,target=/punch_linker/output \
-  dimeng851/punch_linker:v1
+  --name punch_linker2_con \
+  --mount type=bind,source=/Users/deemeng/Downloads/data/linker/linker.fasta,target=/punch_linker2/data/input.fasta \
+  --mount type=bind,source=/Users/deemeng/Downloads/data/linker/msaTrans,target=/punch_linker2/data/msaTrans \
+  --mount type=bind,source=/Users/deemeng/Downloads/data/linker/protTrans,target=/punch_linker2/data/protTrans \
+  --mount type=bind,source=/Users/deemeng/Downloads/data/linker/output,target=/punch_linker2/output \
+  dimeng851/punch_linker2:v2
   ```
 * Find the results in **OUTPUT** folder.
 

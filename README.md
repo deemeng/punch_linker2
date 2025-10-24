@@ -54,10 +54,10 @@ Note,
   docker run -d \
   -it \
   --name punch_linker2_con \
-  --mount type=bind,source=/Users/deemeng/Downloads/data/linker/linker.fasta,target=/punch_linker2/data/input.fasta \
-  --mount type=bind,source=/Users/deemeng/Downloads/data/linker/msaTrans,target=/punch_linker2/data/msaTrans \
-  --mount type=bind,source=/Users/deemeng/Downloads/data/linker/protTrans,target=/punch_linker2/data/protTrans \
-  --mount type=bind,source=/Users/deemeng/Downloads/data/linker/output,target=/punch_linker2/output \
+  --mount type=bind,source=data/input.fasta,target=/punch_linker2/data/input.fasta \
+  --mount type=bind,source=data/msaTrans,target=/punch_linker2/data/msaTrans \
+  --mount type=bind,source=data/protTrans,target=/punch_linker2/data/protTrans \
+  --mount type=bind,source=data/results,target=/punch_linker2/output \
   dimeng851/punch_linker2:v2
   ```
 * Find the results in **OUTPUT** folder.

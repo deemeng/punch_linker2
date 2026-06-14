@@ -27,7 +27,7 @@ Note,
 #### Installing
 * Pull the Docker image from  <a href="https://hub.docker.com/repository/docker/dimeng851/punch_linker2/tags">DockerHub</a>
   ```sh
-  docker pull dimeng851/punch_linker2:v2
+  docker pull dimeng851/punch_linker2:v3
   ```
 
 #### Executing program
@@ -46,7 +46,7 @@ Note,
   --mount type=bind,source=[PATH_TO_MSATRANS],target=/punch_linker2/data/msaTrans \
   --mount type=bind,source=[PATH_TO_PROTTRANS],target=/punch_linker2/data/protTrans \
   --mount type=bind,source=[PATH_OUTPUT],target=/punch_linker2/output \
-  dimeng851/punch_linker2:v2
+  dimeng851/punch_linker2:v3
   ```
   > 
   >An example:
@@ -58,7 +58,7 @@ Note,
   --mount type=bind,source=data/msaTrans,target=/punch_linker2/data/msaTrans \
   --mount type=bind,source=data/protTrans,target=/punch_linker2/data/protTrans \
   --mount type=bind,source=data/results,target=/punch_linker2/output \
-  dimeng851/punch_linker2:v2
+  dimeng851/punch_linker2:v3
   ```
 * Find the results in **OUTPUT** folder.
 

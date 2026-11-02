@@ -58,10 +58,10 @@ Note,
   docker run -d \
   -it \
   --name punch_linker2_con \
-  --mount type=bind,source=data/input.fasta,target=/punch_linker2/data/input.fasta \
-  --mount type=bind,source=data/msaTrans,target=/punch_linker2/data/msaTrans \
-  --mount type=bind,source=data/protTrans,target=/punch_linker2/data/protTrans \
-  --mount type=bind,source=data/results,target=/punch_linker2/output \
+  --mount type=bind,source="$(pwd)"/data/input.fasta,target=/punch_linker2/data/input.fasta \
+  --mount type=bind,source="$(pwd)"/data/msaTrans,target=/punch_linker2/data/msaTrans \
+  --mount type=bind,source="$(pwd)"/data/protTrans,target=/punch_linker2/data/protTrans \
+  --mount type=bind,source="$(pwd)"/data/results,target=/punch_linker2/output \
   dimeng851/punch_linker2:v4
   ```
 * Find the results in **OUTPUT** folder.
